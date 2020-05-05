@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace WebsocketApp.Controllers
 {
     [ApiController]
+    [Route("")]
     public class DefaultController : ControllerBase
     {
         private readonly ILogger<DefaultController> _logger;
@@ -18,7 +19,7 @@ namespace WebsocketApp.Controllers
         }
 
         [HttpGet]
-        public IActionResponse Get()
+        public IActionResult Get()
         {
             return Ok("Websocket App");
         }
